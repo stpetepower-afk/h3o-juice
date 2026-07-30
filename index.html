@@ -80,6 +80,25 @@
 
   /* ---------- Sections ---------- */
   section { padding: 3rem 0; }
+  /* Gentle fade-up on load — content is fully visible even if this doesn't run. */
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes floatUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    main section { animation: floatUp .7s cubic-bezier(.22,.61,.36,1) both; }
+    main section:nth-child(2) { animation-delay: .05s; }
+    main section:nth-child(3) { animation-delay: .1s; }
+    main section:nth-child(4) { animation-delay: .15s; }
+    main section:nth-child(5) { animation-delay: .2s; }
+    @keyframes sheen { 0% { background-position: -140% 0; } 60%,100% { background-position: 240% 0; } }
+    .logo {
+      background: linear-gradient(100deg, #fff 30%, rgba(255,255,255,.55) 46%, #fff 62%);
+      background-size: 240% 100%; -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: sheen 4.5s ease-in-out infinite;
+    }
+    .logo .three { -webkit-text-fill-color: var(--citrus); color: var(--citrus); }
+    .callbar { animation: barPulse 2.8s ease-in-out infinite; }
+    @keyframes barPulse { 0%,100% { box-shadow: 0 -4px 16px rgba(0,0,0,.18); } 50% { box-shadow: 0 -4px 22px rgba(230,65,90,.55); } }
+  }
   .eyebrow { text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.72rem; font-weight: 700; color: var(--citrus-deep); }
   h2 { font-size: 1.7rem; color: var(--melon-deep); margin: 0.35rem 0 1.4rem; text-align: center; letter-spacing: -0.5px; }
 
@@ -272,9 +291,9 @@
     <h2>Follow the fresh</h2>
     <p class="coverage-note" style="margin-bottom:0.4rem;">Social pages are on the way — follow along for daily locations and new flavors.</p>
     <div class="social-row">
-      <a class="social-btn" href="#">📸 Instagram <span class="soon">soon</span></a>
-      <a class="social-btn" href="#">🎵 TikTok <span class="soon">soon</span></a>
-      <a class="social-btn" href="#">👍 Facebook <span class="soon">soon</span></a>
+      <a class="social-btn" href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener">📸 @h3ojuicefl <span class="soon">soon</span></a>
+      <a class="social-btn" href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener">🎵 @h3ojuicefl <span class="soon">soon</span></a>
+      <a class="social-btn" href="https://facebook.com/h3ojuicefl" target="_blank" rel="noopener">👍 @h3ojuicefl <span class="soon">soon</span></a>
     </div>
   </section>
 
