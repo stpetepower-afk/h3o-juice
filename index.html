@@ -1,324 +1,417 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>H3O — Fresh Hand-Pressed Juice · Tampa Bay &amp; Central Florida</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="H3O — hand-pressed fresh juice made daily. Seeded Watermelon and Mango Pineapple Orange, served across Tampa Bay and Central Florida. Call or text 813-629-1078 for today's location." />
-<meta name="theme-color" content="#c22c44" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e6415a'/%3E%3Ctext x='50' y='50' font-size='58' text-anchor='middle' dominant-baseline='central'%3E%F0%9F%8D%89%3C/text%3E%3C/svg%3E" />
-<meta property="og:title" content="H3O — Fresh Hand-Pressed Juice" />
-<meta property="og:description" content="Hand-pressed fresh juice, made daily across Tampa Bay & Central Florida. Call/text 813-629-1078 for today's stop." />
-<meta property="og:type" content="website" />
-<style>
-  :root {
-    --melon: #e6415a;
-    --melon-deep: #b8283f;
-    --rind: #2f8f57;
-    --rind-deep: #1f6e40;
-    --citrus: #f6a52b;
-    --citrus-deep: #dd8409;
-    --cream: #fff9f2;
-    --card: #ffffff;
-    --ink: #26191b;
-    --muted: #6c5b5d;
-    color-scheme: light;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--cream); color: var(--ink); line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 1.25rem; }
-  a { color: inherit; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H3O Juice FL — Fresh Hand-Pressed Juice | Tampa Bay &amp; Central Florida</title>
+  <meta name="description" content="H3O Juice FL — real, hand-pressed juice made fresh daily. Seeded Watermelon and Mango Pineapple Orange, served six days a week across Tampa Bay and Central Florida. Call or text 813-629-1078 for today's location." />
+  <meta name="theme-color" content="#0c100e" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://stpetepower-afk.github.io/h3o-juice/" />
 
-  /* ---------- Hero ---------- */
-  .hero {
-    position: relative; overflow: hidden; color: #fff; text-align: center;
-    background:
-      radial-gradient(120% 90% at 50% -10%, #ff5c72 0%, var(--melon) 42%, var(--melon-deep) 78%, #7d1f30 130%);
-    padding: 3.75rem 1.25rem 5.5rem;
-  }
-  .hero::before {
-    content: ""; position: absolute; inset: 0;
-    background-image:
-      radial-gradient(circle at 18% 30%, rgba(255,255,255,.14) 0 8px, transparent 9px),
-      radial-gradient(circle at 82% 22%, rgba(255,255,255,.10) 0 6px, transparent 7px),
-      radial-gradient(circle at 70% 60%, rgba(255,255,255,.10) 0 10px, transparent 11px),
-      radial-gradient(circle at 30% 72%, rgba(255,255,255,.08) 0 7px, transparent 8px);
-    pointer-events: none;
-  }
-  .logo {
-    position: relative; font-size: 4rem; font-weight: 800; letter-spacing: -2px; line-height: 1;
-    display: inline-flex; align-items: baseline;
-  }
-  .logo .three {
-    color: var(--citrus);
-    position: relative;
-  }
-  .droplet { display: inline-block; width: 0.5em; margin-left: 2px; }
-  .kicker {
-    position: relative; text-transform: uppercase; letter-spacing: 3px; font-size: 0.72rem;
-    font-weight: 700; opacity: 0.9; margin-bottom: 1rem;
-  }
-  .tagline { position: relative; font-size: 1.35rem; font-weight: 600; margin-top: 1rem; }
-  .sub { position: relative; font-size: 1rem; margin-top: 0.6rem; opacity: 0.9; }
-  .cta-row { position: relative; margin-top: 1.9rem; display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 0.45rem; text-decoration: none;
-    font-weight: 700; padding: 0.8rem 1.5rem; border-radius: 999px; font-size: 1rem;
-    transition: transform .12s ease, box-shadow .12s ease;
-  }
-  .btn:active { transform: translateY(1px); }
-  .btn-call { background: #fff; color: var(--melon-deep); box-shadow: 0 6px 18px rgba(0,0,0,.2); }
-  .btn-ghost { background: rgba(255,255,255,.14); color: #fff; border: 1.5px solid rgba(255,255,255,.55); }
+  <!-- Open Graph (image intentionally omitted until a real product photo exists) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="H3O Juice FL — Fresh Hand-Pressed Juice" />
+  <meta property="og:description" content="Real hand-pressed juice, made daily across Tampa Bay & Central Florida. Call/text 813-629-1078 for today's stop." />
+  <meta property="og:url" content="https://stpetepower-afk.github.io/h3o-juice/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="H3O Juice FL" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="H3O Juice FL — Fresh Hand-Pressed Juice" />
+  <meta name="twitter:description" content="Real hand-pressed juice across Tampa Bay & Central Florida. Call/text 813-629-1078." />
 
-  /* wave divider */
-  .wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; }
-  .wave svg { width: 100%; height: 60px; display: block; }
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%89%3C/text%3E%3C/svg%3E" />
+  <link rel="manifest" href="manifest.json" />
 
-  /* ---------- Sections ---------- */
-  section { padding: 3rem 0; }
-  /* Gentle fade-up on load — content is fully visible even if this doesn't run. */
-  @media (prefers-reduced-motion: no-preference) {
-    @keyframes floatUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-    main section { animation: floatUp .7s cubic-bezier(.22,.61,.36,1) both; }
-    main section:nth-child(2) { animation-delay: .05s; }
-    main section:nth-child(3) { animation-delay: .1s; }
-    main section:nth-child(4) { animation-delay: .15s; }
-    main section:nth-child(5) { animation-delay: .2s; }
-    @keyframes sheen { 0% { background-position: -140% 0; } 60%,100% { background-position: 240% 0; } }
-    .logo {
-      background: linear-gradient(100deg, #fff 30%, rgba(255,255,255,.55) 46%, #fff 62%);
-      background-size: 240% 100%; -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: sheen 4.5s ease-in-out infinite;
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "H3O Juice FL",
+    "description": "Fresh, hand-pressed juice made daily across Tampa Bay and Central Florida for over 18 months.",
+    "url": "https://stpetepower-afk.github.io/h3o-juice/",
+    "telephone": "+18136291078",
+    "priceRange": "$",
+    "servesCuisine": "Juice Bar",
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Hillsborough County" },
+      { "@type": "AdministrativeArea", "name": "Pinellas County" },
+      { "@type": "AdministrativeArea", "name": "Pasco County" },
+      { "@type": "AdministrativeArea", "name": "Polk County" },
+      { "@type": "AdministrativeArea", "name": "Manatee County" },
+      { "@type": "AdministrativeArea", "name": "Orange County" }
+    ],
+    "sameAs": ["https://instagram.com/h3ojuicefl", "https://tiktok.com/@h3ojuicefl"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0c100e;
+      --surface: rgba(26, 33, 28, 0.55);
+      --glass: rgba(255, 255, 255, 0.06);
+      --glass-border: rgba(255, 255, 255, 0.12);
+      --glass-highlight: rgba(255, 255, 255, 0.18);
+      --text: #f4f1ea;
+      --text-muted: #a8b0a4;
+      --accent: #7cb342;
+      --accent-soft: #9ccc65;
+      --accent-glow: rgba(124, 179, 66, 0.25);
+      --melon: #ff6b81;
+      --gold: #e8c47c;
+      --radius: 20px;
+      --radius-sm: 12px;
+      --blur: 24px;
+      --blur-strong: 40px;
     }
-    .logo .three { -webkit-text-fill-color: var(--citrus); color: var(--citrus); }
-    .callbar { animation: barPulse 2.8s ease-in-out infinite; }
-    @keyframes barPulse { 0%,100% { box-shadow: 0 -4px 16px rgba(0,0,0,.18); } 50% { box-shadow: 0 -4px 22px rgba(230,65,90,.55); } }
-  }
-  .eyebrow { text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.72rem; font-weight: 700; color: var(--citrus-deep); }
-  h2 { font-size: 1.7rem; color: var(--melon-deep); margin: 0.35rem 0 1.4rem; text-align: center; letter-spacing: -0.5px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+      padding-bottom: 3.75rem; /* room for sticky call bar on mobile */
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(124, 179, 66, 0.12), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 90% 20%, rgba(255, 107, 129, 0.08), transparent 45%),
+        radial-gradient(ellipse 50% 30% at 50% 100%, rgba(124, 179, 66, 0.05), transparent 40%);
+    }
+    body::after {
+      content: ''; position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.6;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
 
-  /* Flavors */
-  .flavors { display: grid; gap: 1.1rem; }
-  @media (min-width: 620px) { .flavors { grid-template-columns: 1fr 1fr; } }
-  .flavor {
-    position: relative; background: var(--card); border-radius: 20px; padding: 1.5rem 1.35rem 1.4rem;
-    border: 1px solid #f1e4d7; box-shadow: 0 6px 20px rgba(0,0,0,.05); overflow: hidden;
-  }
-  .flavor .art {
-    width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center;
-    font-size: 1.9rem; margin-bottom: 0.9rem;
-  }
-  .flavor.melon .art { background: linear-gradient(150deg,#ffdbe1,#ffb3c0); }
-  .flavor.citrus .art { background: linear-gradient(150deg,#ffe9c2,#ffd089); }
-  .flavor .badge {
-    display: inline-block; font-size: 0.68rem; font-weight: 800; text-transform: uppercase;
-    letter-spacing: 0.6px; padding: 0.22rem 0.65rem; border-radius: 999px; margin-bottom: 0.55rem;
-  }
-  .flavor.melon .badge { background: #fde3e8; color: var(--melon-deep); }
-  .flavor.citrus .badge { background: #fdeccb; color: var(--citrus-deep); }
-  .flavor h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
-  .flavor p { color: var(--muted); font-size: 0.95rem; }
+    .glass {
+      background: var(--glass);
+      backdrop-filter: blur(var(--blur)) saturate(1.4);
+      -webkit-backdrop-filter: blur(var(--blur)) saturate(1.4);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25), inset 0 1px 0 var(--glass-highlight);
+    }
+    .glass-strong {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(var(--blur-strong)) saturate(1.6);
+      -webkit-backdrop-filter: blur(var(--blur-strong)) saturate(1.6);
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.22);
+    }
 
-  /* Freshness / trust */
-  .fresh { background: linear-gradient(135deg,#f2fbf5,#e6f6ec); border-radius: 24px; padding: 2rem 1.5rem; }
-  .fresh-grid { display: grid; gap: 1.1rem; margin-top: 0.5rem; }
-  @media (min-width: 620px) { .fresh-grid { grid-template-columns: repeat(3,1fr); } }
-  .fresh-item { text-align: center; }
-  .fresh-item .ic { font-size: 1.8rem; }
-  .fresh-item h4 { color: var(--rind-deep); margin: 0.4rem 0 0.25rem; font-size: 1.02rem; }
-  .fresh-item p { color: #4b6553; font-size: 0.88rem; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0.9rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+      background: rgba(12,16,14,0.45);
+      backdrop-filter: blur(var(--blur-strong)) saturate(1.5);
+      -webkit-backdrop-filter: blur(var(--blur-strong)) saturate(1.5);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.35rem; }
+    .logo span { color: var(--accent-soft); }
+    .nav-links { display: flex; gap: 1.75rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+    .nav-links a { transition: color 0.2s; position: relative; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 0; height: 1.5px; background: var(--accent-soft); transition: width 0.25s ease; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--accent); color: #0c100e; padding: 0.5rem 1.15rem; border-radius: 999px; font-weight: 600; font-size: 0.875rem; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; }
+    .nav-cta:hover { background: var(--accent-soft); transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow); }
 
-  /* Story */
-  .story { text-align: center; }
-  .story p { max-width: 52ch; margin: 0 auto 0.95rem; color: #4a3f41; font-size: 1.02rem; }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 7.5rem 1.5rem 4rem; max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.95rem; border-radius: 999px; font-size: 0.8rem; font-weight: 500; color: var(--text-muted); margin-bottom: 1.75rem; width: fit-content; }
+    .hero-badge .dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent); animation: pulse 2.2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.75rem, 7vw, 4.6rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 1.25rem; max-width: 15ch; }
+    .hero h1 em { font-style: italic; color: var(--accent-soft); }
+    .hero-sub { font-size: 1.15rem; color: var(--text-muted); max-width: 38ch; margin-bottom: 2.5rem; line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.5rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 1.65rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; transition: all 0.22s ease; border: none; cursor: pointer; font-family: inherit; }
+    .btn-primary { background: var(--accent); color: #0c100e; box-shadow: 0 4px 20px var(--accent-glow); }
+    .btn-primary:hover { background: var(--accent-soft); transform: translateY(-2px); box-shadow: 0 8px 28px var(--accent-glow); }
+    .btn-ghost { background: var(--glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: var(--text); border: 1px solid var(--glass-border); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.22); transform: translateY(-2px); }
+    .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; padding-top: 2rem; border-top: 1px solid var(--glass-border); }
+    .stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 600; color: var(--gold); margin-bottom: 0.15rem; }
+    .stat span { font-size: 0.85rem; color: var(--text-muted); }
 
-  /* Coverage */
-  .coverage { text-align: center; }
-  .chips { display: flex; flex-wrap: wrap; gap: 0.55rem; justify-content: center; margin: 0.4rem 0 1.2rem; }
-  .chip {
-    background: #fff; border: 1.5px solid #ffd7b0; color: var(--citrus-deep);
-    padding: 0.5rem 0.95rem; border-radius: 999px; font-weight: 700; font-size: 0.92rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,.04);
-  }
-  .coverage-note { color: var(--muted); max-width: 46ch; margin: 0 auto; font-size: 0.96rem; }
+    section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+    .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 1rem; max-width: 18ch; }
+    .section-desc { color: var(--text-muted); max-width: 50ch; margin-bottom: 2.5rem; font-size: 1.05rem; }
 
-  /* Contact / order */
-  .order {
-    background: radial-gradient(120% 120% at 50% 0%, var(--rind) 0%, var(--rind-deep) 100%);
-    color: #fff; border-radius: 24px; padding: 2.4rem 1.5rem; text-align: center;
-  }
-  .order h2 { color: #fff; }
-  .order p { opacity: 0.92; max-width: 40ch; margin: 0 auto 1.4rem; }
-  .order .btn-call { color: var(--rind-deep); }
-  .order .phone { display: block; margin-top: 1rem; font-size: 1.5rem; font-weight: 800; letter-spacing: 0.5px; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media (min-width: 768px) { .about-grid { grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; } }
+    .about-card { border-radius: var(--radius); padding: 2rem; }
+    .about-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; margin-bottom: 0.75rem; }
+    .about-card p { color: var(--text-muted); font-size: 0.95rem; }
+    .about-points { display: flex; flex-direction: column; gap: 1.25rem; }
+    .point { display: flex; gap: 1rem; align-items: flex-start; }
+    .point-icon { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 1.25rem; flex-shrink: 0; }
+    .point strong { display: block; margin-bottom: 0.2rem; }
+    .point span { color: var(--text-muted); font-size: 0.9rem; }
 
-  /* Social */
-  .social { text-align: center; }
-  .social-row { display: flex; gap: 0.7rem; justify-content: center; margin-top: 0.6rem; flex-wrap: wrap; }
-  .social-btn {
-    display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;
-    background: #fff; border: 1px solid #f0e3d6; border-radius: 999px; padding: 0.6rem 1.1rem;
-    font-weight: 700; color: var(--ink); box-shadow: 0 2px 8px rgba(0,0,0,.04);
-  }
-  .social-btn .soon { font-size: 0.68rem; font-weight: 700; color: #fff; background: var(--citrus); padding: 0.1rem 0.45rem; border-radius: 999px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+    .juice-card { border-radius: var(--radius); padding: 1.35rem; transition: transform 0.25s ease, border-color 0.25s, box-shadow 0.25s; }
+    .juice-card:hover { transform: translateY(-4px); border-color: rgba(124,179,66,0.35); box-shadow: 0 12px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(124,179,66,0.15); }
+    .juice-media { width: 100%; aspect-ratio: 1; background: rgba(0,0,0,0.25); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; overflow: hidden; }
+    .juice-emoji { font-size: 3.5rem; line-height: 1; }
+    .juice-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.35rem; }
+    .juice-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .juice-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    .juice-tag { background: rgba(255,255,255,0.08); padding: 0.25rem 0.6rem; border-radius: 6px; color: var(--text-muted); font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.06); }
+    .juice-tag.original { color: var(--melon); border-color: rgba(255,107,129,0.3); }
+    .juice-tag.evolution { color: var(--gold); border-color: rgba(232,196,124,0.3); }
 
-  footer { text-align: center; padding: 2.5rem 1.25rem 3rem; color: #9a8d8f; font-size: 0.85rem; }
-  footer .fmark { font-weight: 800; color: var(--melon-deep); font-size: 1.1rem; letter-spacing: -0.5px; }
+    /* Coverage chips */
+    .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .chip { border-radius: 999px; padding: 0.55rem 1rem; font-weight: 600; font-size: 0.9rem; color: var(--text); }
 
-  /* sticky mobile call bar */
-  .callbar {
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-    background: var(--melon-deep); color: #fff; text-align: center; padding: 0.85rem;
-    font-weight: 800; text-decoration: none; box-shadow: 0 -4px 16px rgba(0,0,0,.18);
-    letter-spacing: 0.3px;
-  }
-  @media (min-width: 620px) { .callbar { display: none; } }
-  body { padding-bottom: 3.5rem; }
-  @media (min-width: 620px) { body { padding-bottom: 0; } }
-</style>
+    .newsletter { border-radius: calc(var(--radius) + 6px); padding: 2.75rem 2rem; margin: 0 1.5rem; max-width: 1100px; margin-left: auto; margin-right: auto; position: relative; z-index: 2; }
+    .newsletter-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+    .newsletter h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.6rem; }
+    .newsletter p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .newsletter-form { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    .newsletter-form input[type="email"] { flex: 1 1 220px; min-width: 0; padding: 0.9rem 1.25rem; border-radius: 999px; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.35); color: var(--text); font-size: 0.95rem; font-family: inherit; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+    .newsletter-form input[type="email"]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+    .newsletter-form input[type="email"]::placeholder { color: var(--text-muted); }
+    .newsletter-form button { padding: 0.9rem 1.6rem; border-radius: 999px; border: none; background: var(--accent); color: #0c100e; font-weight: 600; font-size: 0.95rem; cursor: pointer; font-family: inherit; transition: all 0.2s; }
+    .newsletter-form button:hover { background: var(--accent-soft); transform: translateY(-1px); box-shadow: 0 4px 16px var(--accent-glow); }
+    .newsletter-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted); }
+    .form-status { margin-top: 1rem; font-size: 0.9rem; min-height: 1.4em; }
+    .form-status.success { color: var(--accent-soft); }
+    .form-status.error { color: #ef9a9a; }
+
+    .cta-band { border-radius: calc(var(--radius) + 6px); padding: 3rem 2rem; text-align: center; margin: 2.5rem 1.5rem 0; max-width: 1100px; margin-left: auto; margin-right: auto; position: relative; z-index: 2; }
+    .cta-band h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 0.75rem; }
+    .cta-band p { color: var(--text-muted); margin-bottom: 1.75rem; max-width: 40ch; margin-left: auto; margin-right: auto; }
+    .cta-phone { display: block; margin-top: 1.1rem; font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); }
+
+    footer { padding: 3.5rem 1.5rem 2.5rem; max-width: 1100px; margin: 4rem auto 0; border-top: 1px solid var(--glass-border); position: relative; z-index: 2; }
+    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; }
+    .footer-brand p { color: var(--text-muted); font-size: 0.9rem; max-width: 30ch; margin-top: 0.75rem; }
+    .footer-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .footer-col h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.9rem; }
+    .footer-col a { display: block; color: var(--text); font-size: 0.95rem; margin-bottom: 0.45rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--accent-soft); }
+    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); font-size: 0.85rem; color: var(--text-muted); }
+
+    /* Sticky mobile call bar */
+    .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; display: block; text-align: center; padding: 0.9rem; font-weight: 700; letter-spacing: 0.3px; color: #0c100e; background: var(--accent); box-shadow: 0 -4px 20px rgba(0,0,0,0.35); }
+    @media (min-width: 760px) { .callbar { display: none; } body { padding-bottom: 0; } }
+
+    @media (max-width: 700px) { .nav-links { display: none; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero-badge .dot { animation: none; } .juice-card, .btn, .nav-cta { transition: none; } }
+  </style>
 </head>
 <body>
 
-<!-- ---------- HERO ---------- -->
-<header class="hero">
-  <div class="kicker">Tampa Bay &amp; Central Florida</div>
-  <div class="logo">H<span class="three">3</span>O
-    <svg class="droplet" viewBox="0 0 24 32" fill="none" aria-hidden="true">
-      <path d="M12 1C12 1 3 12 3 20a9 9 0 0 0 18 0C21 12 12 1 12 1Z" fill="#f6a52b"/>
-      <ellipse cx="9" cy="18" rx="2.2" ry="3" fill="#fff" opacity=".5"/>
-    </svg>
-  </div>
-  <div class="tagline">Fresh, hand-pressed juice — made daily.</div>
-  <div class="sub">Real fruit. No shortcuts. Straight from the cooler to you.</div>
-  <div class="cta-row">
-    <a class="btn btn-call" href="tel:+18136291078">📞 Call / Text to Order</a>
-    <a class="btn btn-ghost" href="#flavors">See the Flavors</a>
-  </div>
-  <div class="wave" aria-hidden="true">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 30 C 240 60 480 0 720 20 C 960 40 1200 60 1440 25 L1440 60 L0 60 Z" fill="#fff9f2"/></svg>
-  </div>
-</header>
+  <a href="#main" style="position:absolute;left:-9999px;">Skip to content</a>
 
-<main class="wrap">
+  <nav role="navigation" aria-label="Main">
+    <a href="#" class="logo" aria-label="H3O Juice home">H3O<span>Juice</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#menu">Juices</a>
+      <a href="#coverage">Where</a>
+      <a href="#contact">Order</a>
+    </div>
+    <a href="tel:+18136291078" class="nav-cta">Call / Text to Order</a>
+  </nav>
 
-  <!-- ---------- FLAVORS ---------- -->
-  <section id="flavors">
-    <div class="eyebrow">Our Juices</div>
-    <h2>Two flavors. Zero shortcuts.</h2>
-    <div class="flavors">
-      <div class="flavor melon">
-        <div class="art">🍉</div>
-        <span class="badge">The Original</span>
-        <h3>Seeded Watermelon</h3>
-        <p>Where it all started. Pressed fresh from real seeded watermelon — nothing added, nothing fake. Just cold, clean Florida refreshment in every bottle.</p>
+  <main id="main">
+    <header class="hero">
+      <div class="hero-badge glass">
+        <span class="dot" aria-hidden="true"></span>
+        Tampa Bay &amp; Central Florida · 6 days a week
       </div>
-      <div class="flavor citrus">
-        <div class="art">🥭</div>
-        <span class="badge">The Evolution</span>
-        <h3>Mango · Pineapple · Orange</h3>
-        <p>A bright tropical blend, hand-pressed the same careful way. Mango, pineapple, and orange — sunshine you can drink.</p>
+      <h1>Real juice.<br /><em>Hand-pressed.</em></h1>
+      <p class="hero-sub">
+        Fresh juice, pressed by hand and made daily — brought straight from the cooler to you.
+        Eighteen months of real customers, one bottle at a time.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+18136291078" class="btn btn-primary">📞 Call / Text to Order</a>
+        <a href="#menu" class="btn btn-ghost">See the juices</a>
+      </div>
+      <div class="hero-stats" role="list">
+        <div class="stat" role="listitem"><strong>18+</strong><span>months serving</span></div>
+        <div class="stat" role="listitem"><strong>6</strong><span>days a week</span></div>
+        <div class="stat" role="listitem"><strong>100%</strong><span>hand-pressed</span></div>
+      </div>
+    </header>
+
+    <section id="about" aria-labelledby="about-title">
+      <p class="section-label">The real story</p>
+      <h2 id="about-title" class="section-title">Built on juice, not hype</h2>
+      <p class="section-desc">
+        H3O started with one person, a pickup truck, a couple of coolers, and a promise to show up six days a week.
+        No warehouse, no concentrate, no shortcuts — just real fruit, pressed fresh and brought to the community.
+      </p>
+      <div class="about-grid">
+        <div class="about-points">
+          <div class="point">
+            <span class="point-icon glass" aria-hidden="true">👐</span>
+            <div>
+              <strong>Hand-pressed, never from concentrate</strong>
+              <span>Every bottle is pressed by hand from real fruit — nothing added, nothing fake.</span>
+            </div>
+          </div>
+          <div class="point">
+            <span class="point-icon glass" aria-hidden="true">🧊</span>
+            <div>
+              <strong>Made daily, kept cold</strong>
+              <span>Fresh batches six days a week, on ice and brought straight to you.</span>
+            </div>
+          </div>
+          <div class="point">
+            <span class="point-icon glass" aria-hidden="true">🚚</span>
+            <div>
+              <strong>Local &amp; consistent</strong>
+              <span>Tampa Bay roots, growing across Central Florida — by word of mouth, one customer at a time.</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card glass">
+          <h3>Why H3O?</h3>
+          <p>
+            Water is H₂O. We add the third thing that matters — real fruit, pressed by hand.
+            Clean, cold refreshment made the honest way, brought right to your corner of Florida.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" aria-labelledby="menu-title">
+      <p class="section-label">What we pour</p>
+      <h2 id="menu-title" class="section-title">Two flavors. Zero shortcuts.</h2>
+      <p class="section-desc">
+        Real product photos are on the way — for now, here's what's in the cooler.
+      </p>
+      <div class="menu-grid">
+        <article class="juice-card glass">
+          <div class="juice-media" aria-hidden="true"><span class="juice-emoji">🍉</span></div>
+          <h3>Seeded Watermelon</h3>
+          <p>Where it all started. Pressed fresh from real seeded watermelon — cold, clean Florida refreshment in every bottle.</p>
+          <div class="juice-meta"><span class="juice-tag original">The Original</span></div>
+        </article>
+        <article class="juice-card glass">
+          <div class="juice-media" aria-hidden="true"><span class="juice-emoji">🥭</span></div>
+          <h3>Mango · Pineapple · Orange</h3>
+          <p>A bright tropical blend, hand-pressed the same careful way. Mango, pineapple, and orange — sunshine you can drink.</p>
+          <div class="juice-meta"><span class="juice-tag evolution">The Evolution</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="coverage" aria-labelledby="coverage-title">
+      <p class="section-label">Where we serve</p>
+      <h2 id="coverage-title" class="section-title">Across the Bay &amp; Central Florida</h2>
+      <p class="section-desc">
+        We're a mobile operation, so the spot changes with the day. Call or text
+        <a href="tel:+18136291078" style="color:var(--accent-soft);font-weight:600;">813-629-1078</a>
+        to find out where we'll be — or to place an order.
+      </p>
+      <div class="chips">
+        <span class="chip glass">Hillsborough</span>
+        <span class="chip glass">Pinellas</span>
+        <span class="chip glass">Pasco</span>
+        <span class="chip glass">Polk</span>
+        <span class="chip glass">Manatee</span>
+        <span class="chip glass">Orange · Orlando</span>
+      </div>
+    </section>
+
+    <div class="newsletter glass-strong" id="newsletter">
+      <div class="newsletter-inner">
+        <h2>Stay in the loop</h2>
+        <p>Fresh-batch alerts, daily locations, and new flavors. No spam — just the good stuff.</p>
+        <form class="newsletter-form" id="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" required placeholder="Your email" aria-label="Email address" autocomplete="email" />
+          <input type="hidden" name="_subject" value="H3O Juice newsletter signup" />
+          <button type="submit">Notify me</button>
+        </form>
+        <p class="newsletter-note">We respect your inbox. Unsubscribe anytime.</p>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
       </div>
     </div>
-  </section>
 
-  <!-- ---------- FRESHNESS ---------- -->
-  <section>
-    <div class="fresh">
-      <div class="eyebrow">Why H3O</div>
-      <h2 style="margin-bottom:0.6rem;">Pressed fresh. Sold fresh.</h2>
-      <div class="fresh-grid">
-        <div class="fresh-item">
-          <div class="ic">👐</div>
-          <h4>Hand-Pressed</h4>
-          <p>Every bottle is pressed by hand — never from concentrate.</p>
+    <div class="cta-band glass" id="contact">
+      <h2>Ready for the real thing?</h2>
+      <p>Call or text and we'll tell you exactly where we are today — and get you the freshest juice in Florida.</p>
+      <div class="hero-actions" style="justify-content: center;">
+        <a href="tel:+18136291078" class="btn btn-primary">📞 Call / Text Now</a>
+        <a href="https://instagram.com/h3ojuicefl" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">@h3ojuicefl</a>
+      </div>
+      <a class="cta-phone" href="tel:+18136291078">813-629-1078</a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">H3O<span>Juice</span></div>
+        <p>Fresh, hand-pressed juice. Tampa Bay roots. Built on real customers, six days a week.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#menu">Juices</a>
+          <a href="#coverage">Where to find us</a>
+          <a href="#contact">Order</a>
         </div>
-        <div class="fresh-item">
-          <div class="ic">🗓️</div>
-          <h4>Made Daily</h4>
-          <p>Fresh batches six days a week, Monday through Saturday.</p>
-        </div>
-        <div class="fresh-item">
-          <div class="ic">🧊</div>
-          <h4>Always Cold</h4>
-          <p>Kept on ice and brought straight to you across the Bay.</p>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="tel:+18136291078">Call / Text: 813-629-1078</a>
+          <a href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener noreferrer">Instagram (soon)</a>
+          <a href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener noreferrer">TikTok (soon)</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ---------- STORY ---------- -->
-  <section class="story">
-    <div class="eyebrow">Our Story</div>
-    <h2>Started with a truck and a cooler.</h2>
-    <p>H3O began with one person, a pickup, a couple of coolers, and a promise to show up six days a week.</p>
-    <p>No warehouse. No concentrate. No shortcuts — just real juice, hand-pressed daily and brought straight to the Tampa Bay &amp; Central Florida community. What started as word-of-mouth is growing, one fresh bottle at a time.</p>
-  </section>
-
-  <!-- ---------- COVERAGE ---------- -->
-  <section class="coverage">
-    <div class="eyebrow">Where We Serve</div>
-    <h2>Across the Bay &amp; Central Florida</h2>
-    <div class="chips">
-      <span class="chip">Hillsborough</span>
-      <span class="chip">Pinellas</span>
-      <span class="chip">Pasco</span>
-      <span class="chip">Polk</span>
-      <span class="chip">Manatee</span>
-      <span class="chip">Orange · Orlando</span>
+    <div class="footer-bottom">
+      <span>&copy; 2026 H3O Juice FL.</span>
+      <span>Made with real fruit &amp; zero fluff.</span>
     </div>
-    <p class="coverage-note">We're a mobile operation — locations change with the day. <strong>Call or text 813-629-1078</strong> to find out where we'll be, or to place an order.</p>
-  </section>
+  </footer>
 
-  <!-- ---------- ORDER ---------- -->
-  <section>
-    <div class="order">
-      <div class="eyebrow" style="color:#d8ffe8;">Get Your H3O</div>
-      <h2>Order or find today's stop</h2>
-      <p>Call or text — we'll tell you where we are and get you the freshest juice in Florida.</p>
-      <a class="btn btn-call" href="tel:+18136291078">📞 Call / Text Now</a>
-      <a class="phone" href="tel:+18136291078">813-629-1078</a>
-    </div>
-  </section>
+  <a class="callbar" href="tel:+18136291078">📞 Call / Text to Order — 813-629-1078</a>
 
-  <!-- ---------- SOCIAL ---------- -->
-  <section class="social">
-    <div class="eyebrow">Stay Connected</div>
-    <h2>Follow the fresh</h2>
-
-    <!-- Newsletter: replace YOUR_FORM_ID with the ID from your free Formspree form
-         (formspree.io → New Form → copy the ID after /f/). Until then this shows a
-         friendly note instead of failing. -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
-          style="max-width:360px;margin:0 auto 1.4rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;"
-          onsubmit="if(this.action.indexOf('YOUR_FORM_ID')>-1){alert('Newsletter not wired yet — Larry, drop in your Formspree ID.');return false;}">
-      <input type="email" name="email" required placeholder="Your email for fresh-batch alerts"
-             style="flex:1;min-width:200px;border:1px solid #e7d8c9;border-radius:999px;padding:0.7rem 1rem;" />
-      <button type="submit" class="btn btn-call" style="background:var(--melon);color:#fff;box-shadow:none;">Notify me</button>
-    </form>
-
-    <p class="coverage-note" style="margin-bottom:0.4rem;">Social pages are on the way — follow along for daily locations and new flavors.</p>
-    <div class="social-row">
-      <a class="social-btn" href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener">📸 @h3ojuicefl <span class="soon">soon</span></a>
-      <a class="social-btn" href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener">🎵 @h3ojuicefl <span class="soon">soon</span></a>
-      <a class="social-btn" href="https://facebook.com/h3ojuicefl" target="_blank" rel="noopener">👍 @h3ojuicefl <span class="soon">soon</span></a>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="fmark">H3O</div>
-  Hand-pressed fresh juice · Tampa Bay &amp; Central Florida<br>
-  Made daily. Sold fresh. · Call / Text 813-629-1078
-</footer>
-
-<a class="callbar" href="tel:+18136291078">📞 Call / Text to Order — 813-629-1078</a>
-
+  <script>
+    const form = document.getElementById('newsletter-form');
+    const status = document.getElementById('form-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        if (form.action.includes('YOUR_FORM_ID')) {
+          e.preventDefault();
+          status.textContent = 'Newsletter not wired yet — create a free form at formspree.io and replace YOUR_FORM_ID in index.html.';
+          status.className = 'form-status error';
+          return;
+        }
+        e.preventDefault();
+        status.textContent = 'Sending…';
+        status.className = 'form-status';
+        try {
+          const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+          if (res.ok) {
+            status.textContent = "You're in. Welcome to the list.";
+            status.className = 'form-status success';
+            form.reset();
+          } else {
+            status.textContent = 'Something went wrong. Try again or call/text us.';
+            status.className = 'form-status error';
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.className = 'form-status error';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
