@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="H3O — hand-pressed fresh juice made daily. Seeded Watermelon and Mango Pineapple Orange, served across Tampa Bay and Central Florida. Call or text 813-629-1078 for today's location." />
 <meta name="theme-color" content="#c22c44" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23e6415a'/%3E%3Ctext x='50' y='50' font-size='58' text-anchor='middle' dominant-baseline='central'%3E%F0%9F%8D%89%3C/text%3E%3C/svg%3E" />
 <meta property="og:title" content="H3O — Fresh Hand-Pressed Juice" />
 <meta property="og:description" content="Hand-pressed fresh juice, made daily across Tampa Bay & Central Florida. Call/text 813-629-1078 for today's stop." />
 <meta property="og:type" content="website" />
@@ -289,6 +290,18 @@
   <section class="social">
     <div class="eyebrow">Stay Connected</div>
     <h2>Follow the fresh</h2>
+
+    <!-- Newsletter: replace YOUR_FORM_ID with the ID from your free Formspree form
+         (formspree.io → New Form → copy the ID after /f/). Until then this shows a
+         friendly note instead of failing. -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+          style="max-width:360px;margin:0 auto 1.4rem;display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;"
+          onsubmit="if(this.action.indexOf('YOUR_FORM_ID')>-1){alert('Newsletter not wired yet — Larry, drop in your Formspree ID.');return false;}">
+      <input type="email" name="email" required placeholder="Your email for fresh-batch alerts"
+             style="flex:1;min-width:200px;border:1px solid #e7d8c9;border-radius:999px;padding:0.7rem 1rem;" />
+      <button type="submit" class="btn btn-call" style="background:var(--melon);color:#fff;box-shadow:none;">Notify me</button>
+    </form>
+
     <p class="coverage-note" style="margin-bottom:0.4rem;">Social pages are on the way — follow along for daily locations and new flavors.</p>
     <div class="social-row">
       <a class="social-btn" href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener">📸 @h3ojuicefl <span class="soon">soon</span></a>
