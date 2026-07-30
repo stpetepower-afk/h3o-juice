@@ -3,11 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>H3O Juice FL — Premium Cold-Pressed Juice</title>
-  <meta name="description" content="H3O Juice FL — Real cold-pressed juice. 18 months of serving St. Pete & the Tampa Bay area. Fresh, clean, made with care." />
+  <title>H3O Juice FL — Premium Cold-Pressed Juice | St. Pete & Tampa Bay</title>
+  <meta name="description" content="H3O Juice FL — Real cold-pressed juice. 18 months serving St. Pete & Tampa Bay. Fresh, clean, made with care. No hype. Just juice that earns its keep." />
+  <meta name="theme-color" content="#0f1410" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://stpetepower-afk.github.io/h3o-juice/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="H3O Juice FL — Premium Cold-Pressed Juice" />
+  <meta property="og:description" content="Real cold-pressed juice. 18 months serving St. Pete & Tampa Bay. Fresh, clean, made with care." />
+  <meta property="og:url" content="https://stpetepower-afk.github.io/h3o-juice/" />
+  <meta property="og:image" content="https://stpetepower-afk.github.io/h3o-juice/assets/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="H3O Juice FL" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="H3O Juice FL — Premium Cold-Pressed Juice" />
+  <meta name="twitter:description" content="Real cold-pressed juice. 18 months serving St. Pete & Tampa Bay." />
+  <meta name="twitter:image" content="https://stpetepower-afk.github.io/h3o-juice/assets/images/og-cover.jpg" />
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F34A;</text></svg>" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "H3O Juice FL",
+    "description": "Premium cold-pressed juice serving St. Pete and Tampa Bay for over 18 months.",
+    "url": "https://stpetepower-afk.github.io/h3o-juice/",
+    "image": "https://stpetepower-afk.github.io/h3o-juice/assets/images/og-cover.jpg",
+    "priceRange": "$$",
+    "servesCuisine": "Juice Bar",
+    "areaServed": {
+      "@type": "City",
+      "name": "St. Petersburg"
+    },
+    "sameAs": [
+      "https://instagram.com/h3ojuicefl",
+      "https://tiktok.com/@h3ojuicefl"
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #0f1410;
@@ -22,18 +71,11 @@
       --gold: #e8c47c;
       --border: rgba(255,255,255,0.08);
       --radius: 16px;
+      --radius-sm: 10px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'DM Sans', system-ui, sans-serif;
       background: var(--bg);
@@ -41,8 +83,6 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* Subtle grain */
     body::before {
       content: '';
       position: fixed;
@@ -52,287 +92,115 @@
       z-index: 1000;
       opacity: 0.5;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
 
     /* NAV */
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
       background: rgba(15, 20, 16, 0.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
-
     .logo {
       font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em;
+      display: flex; align-items: center; gap: 0.4rem;
     }
-
-    .logo span {
-      color: var(--accent-soft);
-    }
-
+    .logo span { color: var(--accent-soft); }
     .nav-links {
-      display: flex;
-      gap: 1.75rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-muted);
+      display: flex; gap: 1.75rem;
+      font-size: 0.9rem; font-weight: 500; color: var(--text-muted);
     }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-
+    .nav-links a:hover { color: var(--text); }
     .nav-cta {
-      background: var(--accent);
-      color: #0f1410;
-      padding: 0.5rem 1.1rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.875rem;
+      background: var(--accent); color: #0f1410;
+      padding: 0.5rem 1.1rem; border-radius: 999px;
+      font-weight: 600; font-size: 0.875rem;
       transition: background 0.2s, transform 0.15s;
     }
-
-    .nav-cta:hover {
-      background: var(--accent-soft);
-      transform: translateY(-1px);
-    }
+    .nav-cta:hover { background: var(--accent-soft); transform: translateY(-1px); }
 
     /* HERO */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 7rem 1.5rem 4rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
+      min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+      padding: 7rem 1.5rem 4rem; max-width: 1100px; margin: 0 auto; position: relative;
     }
-
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-bottom: 1.75rem;
-      width: fit-content;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem; border-radius: 999px;
+      font-size: 0.8rem; font-weight: 500; color: var(--text-muted);
+      margin-bottom: 1.75rem; width: fit-content;
     }
-
     .hero-badge .dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
-      border-radius: 50%;
+      width: 7px; height: 7px; background: var(--accent); border-radius: 50%;
       animation: pulse 2s infinite;
     }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.75rem, 7vw, 4.5rem);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-      max-width: 14ch;
+      font-weight: 700; line-height: 1.1; letter-spacing: -0.03em;
+      margin-bottom: 1.25rem; max-width: 14ch;
     }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--accent-soft);
-    }
-
+    .hero h1 em { font-style: italic; color: var(--accent-soft); }
     .hero-sub {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 36ch;
-      margin-bottom: 2.5rem;
-      line-height: 1.65;
+      font-size: 1.15rem; color: var(--text-muted);
+      max-width: 36ch; margin-bottom: 2.5rem; line-height: 1.65;
     }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 3.5rem;
-    }
-
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.5rem; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.9rem 1.6rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.9rem 1.6rem; border-radius: 999px;
+      font-weight: 600; font-size: 0.95rem;
+      transition: all 0.2s; border: none; cursor: pointer;
     }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #0f1410;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-soft);
-      transform: translateY(-2px);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-ghost:hover {
-      background: var(--surface);
-      border-color: rgba(255,255,255,0.15);
-    }
-
+    .btn-primary { background: var(--accent); color: #0f1410; }
+    .btn-primary:hover { background: var(--accent-soft); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-ghost:hover { background: var(--surface); border-color: rgba(255,255,255,0.15); }
     .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
+      display: flex; gap: 2.5rem; flex-wrap: wrap;
+      padding-top: 2rem; border-top: 1px solid var(--border);
     }
-
     .stat strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 0.15rem;
+      display: block; font-family: 'Playfair Display', serif;
+      font-size: 1.75rem; font-weight: 600; color: var(--gold); margin-bottom: 0.15rem;
     }
-
-    .stat span {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+    .stat span { font-size: 0.85rem; color: var(--text-muted); }
 
     /* SECTIONS */
-    section {
-      padding: 5rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
+    section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
     .section-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-soft);
-      margin-bottom: 0.75rem;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent-soft); margin-bottom: 0.75rem;
     }
-
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.9rem, 4vw, 2.6rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      max-width: 18ch;
+      font-weight: 600; letter-spacing: -0.02em; margin-bottom: 1rem; max-width: 18ch;
     }
-
-    .section-desc {
-      color: var(--text-muted);
-      max-width: 48ch;
-      margin-bottom: 2.5rem;
-      font-size: 1.05rem;
-    }
+    .section-desc { color: var(--text-muted); max-width: 48ch; margin-bottom: 2.5rem; font-size: 1.05rem; }
 
     /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
     @media (min-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 3rem;
-        align-items: center;
-      }
+      .about-grid { grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
     }
-
     .about-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 2rem;
     }
-
-    .about-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .about-card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .about-points {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .point {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .point-icon {
-      font-size: 1.5rem;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-
-    .point strong {
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    .point span {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
+    .about-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; margin-bottom: 0.75rem; }
+    .about-card p { color: var(--text-muted); font-size: 0.95rem; }
+    .about-points { display: flex; flex-direction: column; gap: 1.25rem; }
+    .point { display: flex; gap: 1rem; align-items: flex-start; }
+    .point-icon { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+    .point strong { display: block; margin-bottom: 0.2rem; }
+    .point span { color: var(--text-muted); font-size: 0.9rem; }
 
     /* MENU */
     .menu-grid {
@@ -340,331 +208,329 @@
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1.25rem;
     }
-
     .juice-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
       transition: border-color 0.2s, transform 0.2s;
     }
-
-    .juice-card:hover {
-      border-color: rgba(124, 179, 66, 0.35);
-      transform: translateY(-3px);
+    .juice-card:hover { border-color: rgba(124, 179, 66, 0.35); transform: translateY(-3px); }
+    .juice-media {
+      width: 100%; aspect-ratio: 1;
+      background: var(--surface-2); border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem; overflow: hidden;
+      position: relative;
     }
-
-    .juice-emoji {
-      font-size: 2.5rem;
-      margin-bottom: 0.9rem;
-      display: block;
+    .juice-media img {
+      width: 100%; height: 100%; object-fit: cover;
+      /* Ready for real photos: add loading="lazy" decoding="async" */
     }
-
-    .juice-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .juice-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .juice-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.85rem;
-    }
-
-    .juice-price {
-      font-weight: 600;
-      color: var(--gold);
-    }
-
+    .juice-emoji { font-size: 3.5rem; line-height: 1; }
+    .juice-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.35rem; }
+    .juice-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .juice-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    .juice-price { font-weight: 600; color: var(--gold); }
     .juice-tag {
-      background: var(--surface-2);
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
-      color: var(--text-muted);
-      font-size: 0.75rem;
+      background: var(--surface-2); padding: 0.25rem 0.6rem;
+      border-radius: 6px; color: var(--text-muted); font-size: 0.75rem;
     }
+
+    /* NEWSLETTER */
+    .newsletter {
+      background: linear-gradient(135deg, var(--surface) 0%, #1e2a20 100%);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 2.75rem 2rem;
+      margin: 0 1.5rem;
+      max-width: 1100px; margin-left: auto; margin-right: auto;
+    }
+    .newsletter-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+    .newsletter h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.6rem;
+    }
+    .newsletter p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .newsletter-form {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+    }
+    .newsletter-form input[type="email"] {
+      flex: 1 1 220px; min-width: 0;
+      padding: 0.9rem 1.2rem; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--bg);
+      color: var(--text); font-size: 0.95rem; font-family: inherit;
+      outline: none; transition: border-color 0.2s;
+    }
+    .newsletter-form input[type="email"]:focus { border-color: var(--accent); }
+    .newsletter-form input[type="email"]::placeholder { color: var(--text-muted); }
+    .newsletter-form button {
+      padding: 0.9rem 1.6rem; border-radius: 999px; border: none;
+      background: var(--accent); color: #0f1410;
+      font-weight: 600; font-size: 0.95rem; cursor: pointer;
+      font-family: inherit; transition: background 0.2s, transform 0.15s;
+    }
+    .newsletter-form button:hover { background: var(--accent-soft); transform: translateY(-1px); }
+    .newsletter-note {
+      margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);
+    }
+    .form-status {
+      margin-top: 1rem; font-size: 0.9rem; min-height: 1.4em;
+    }
+    .form-status.success { color: var(--accent-soft); }
+    .form-status.error { color: #ef9a9a; }
 
     /* CTA BAND */
     .cta-band {
       background: linear-gradient(135deg, var(--surface) 0%, #1e2a20 100%);
       border: 1px solid var(--border);
       border-radius: calc(var(--radius) + 4px);
-      padding: 3rem 2rem;
-      text-align: center;
-      margin: 2rem 1.5rem 0;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 3rem 2rem; text-align: center;
+      margin: 2.5rem 1.5rem 0; max-width: 1100px;
+      margin-left: auto; margin-right: auto;
     }
-
     .cta-band h2 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-      margin-bottom: 0.75rem;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 0.75rem;
     }
-
     .cta-band p {
-      color: var(--text-muted);
-      margin-bottom: 1.75rem;
-      max-width: 36ch;
-      margin-left: auto;
-      margin-right: auto;
+      color: var(--text-muted); margin-bottom: 1.75rem;
+      max-width: 36ch; margin-left: auto; margin-right: auto;
     }
 
     /* FOOTER */
     footer {
-      padding: 3.5rem 1.5rem 2.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      border-top: 1px solid var(--border);
-      margin-top: 4rem;
+      padding: 3.5rem 1.5rem 2.5rem; max-width: 1100px; margin: 0 auto;
+      border-top: 1px solid var(--border); margin-top: 4rem;
     }
-
     .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem;
     }
-
-    .footer-brand .logo {
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-brand p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      max-width: 28ch;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-    }
-
+    .footer-brand .logo { margin-bottom: 0.75rem; }
+    .footer-brand p { color: var(--text-muted); font-size: 0.9rem; max-width: 28ch; }
+    .footer-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
     .footer-col h4 {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 0.9rem;
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-muted); margin-bottom: 0.9rem;
     }
-
-    .footer-col a {
-      display: block;
-      color: var(--text);
-      font-size: 0.95rem;
-      margin-bottom: 0.45rem;
-    }
-
-    .footer-col a:hover {
-      color: var(--accent-soft);
-    }
-
+    .footer-col a { display: block; color: var(--text); font-size: 0.95rem; margin-bottom: 0.45rem; }
+    .footer-col a:hover { color: var(--accent-soft); }
     .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+      padding-top: 1.5rem; border-top: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--text-muted);
     }
 
-    /* Mobile nav hide */
-    @media (max-width: 700px) {
-      .nav-links {
-        display: none;
-      }
+    @media (max-width: 700px) { .nav-links { display: none; } }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-badge .dot { animation: none; }
+      .juice-card, .btn, .nav-cta { transition: none; }
     }
   </style>
 </head>
 <body>
 
+  <a href="#main" class="sr-only" style="position:absolute;left:-9999px;">Skip to content</a>
+
   <!-- NAV -->
-  <nav>
-    <a href="#" class="logo">H3O<span>Juice</span></a>
+  <nav role="navigation" aria-label="Main">
+    <a href="#" class="logo" aria-label="H3O Juice home">H3O<span>Juice</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#menu">Menu</a>
+      <a href="#newsletter">Updates</a>
       <a href="#contact">Contact</a>
     </div>
     <a href="#contact" class="nav-cta">Order / Find Us</a>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-badge">
-      <span class="dot"></span>
-      Serving St. Pete & Tampa Bay · 6 days a week
-    </div>
-    <h1>Real juice.<br /><em>No shortcuts.</em></h1>
-    <p class="hero-sub">
-      Premium cold-pressed juice made fresh for the people who show up. 
-      Eighteen months of real sales, real customers, and real results.
-    </p>
-    <div class="hero-actions">
-      <a href="#menu" class="btn btn-primary">See the menu</a>
-      <a href="#contact" class="btn btn-ghost">Where to find us</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <strong>18+</strong>
-        <span>months serving</span>
+  <main id="main">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-badge">
+        <span class="dot" aria-hidden="true"></span>
+        Serving St. Pete & Tampa Bay · 6 days a week
       </div>
-      <div class="stat">
-        <strong>6</strong>
-        <span>days a week</span>
+      <h1>Real juice.<br /><em>No shortcuts.</em></h1>
+      <p class="hero-sub">
+        Premium cold-pressed juice made fresh for the people who show up.
+        Eighteen months of real sales, real customers, and real results.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">See the menu</a>
+        <a href="#contact" class="btn btn-ghost">Where to find us</a>
       </div>
-      <div class="stat">
-        <strong>100%</strong>
-        <span>cold-pressed</span>
+      <div class="hero-stats" role="list">
+        <div class="stat" role="listitem">
+          <strong>18+</strong>
+          <span>months serving</span>
+        </div>
+        <div class="stat" role="listitem">
+          <strong>6</strong>
+          <span>days a week</span>
+        </div>
+        <div class="stat" role="listitem">
+          <strong>100%</strong>
+          <span>cold-pressed</span>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <p class="section-label">The real story</p>
-    <h2 class="section-title">Built on juice, not hype</h2>
-    <p class="section-desc">
-      H3O Juice started with a simple idea: make something people actually want to drink every week. 
-      No gimmicks. No over-promises. Just clean, cold-pressed juice that earns its keep.
-    </p>
-
-    <div class="about-grid">
-      <div class="about-points">
-        <div class="point">
-          <span class="point-icon">🍊</span>
-          <div>
-            <strong>Real fruit, real process</strong>
-            <span>Cold-pressed so you get the nutrients, not the heat damage.</span>
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <p class="section-label">The real story</p>
+      <h2 id="about-title" class="section-title">Built on juice, not hype</h2>
+      <p class="section-desc">
+        H3O Juice started with a simple idea: make something people actually want to drink every week.
+        No gimmicks. No over-promises. Just clean, cold-pressed juice that earns its keep.
+      </p>
+      <div class="about-grid">
+        <div class="about-points">
+          <div class="point">
+            <span class="point-icon" aria-hidden="true">🍊</span>
+            <div>
+              <strong>Real fruit, real process</strong>
+              <span>Cold-pressed so you get the nutrients, not the heat damage.</span>
+            </div>
+          </div>
+          <div class="point">
+            <span class="point-icon" aria-hidden="true">💪</span>
+            <div>
+              <strong>Repeat customers</strong>
+              <span>People come back because it tastes good and they feel the difference.</span>
+            </div>
+          </div>
+          <div class="point">
+            <span class="point-icon" aria-hidden="true">🏙️</span>
+            <div>
+              <strong>Local & consistent</strong>
+              <span>St. Pete roots. Six days a week. No disappearing acts.</span>
+            </div>
           </div>
         </div>
-        <div class="point">
-          <span class="point-icon">💪</span>
-          <div>
-            <strong>Repeat customers</strong>
-            <span>People come back because it tastes good and they feel the difference.</span>
-          </div>
-        </div>
-        <div class="point">
-          <span class="point-icon">🏙️</span>
-          <div>
-            <strong>Local & consistent</strong>
-            <span>St. Pete roots. Six days a week. No disappearing acts.</span>
-          </div>
+        <div class="about-card">
+          <h3>Why H3O?</h3>
+          <p>
+            Water is H₂O. We add the third element that matters: intention.
+            Every bottle is made to deliver clean energy, not empty calories or marketing fluff.
+            That’s it.
+          </p>
         </div>
       </div>
-      <div class="about-card">
-        <h3>Why H3O?</h3>
-        <p>
-          Water is H₂O. We add the third element that matters: intention. 
-          Every bottle is made to deliver clean energy, not empty calories or marketing fluff. 
-          That’s it.
-        </p>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" aria-labelledby="menu-title">
+      <p class="section-label">What we pour</p>
+      <h2 id="menu-title" class="section-title">Current lineup</h2>
+      <p class="section-desc">
+        Fresh rotations keep things interesting. Real product photos will replace the placeholders below.
+        Until then, these hold the fort.
+      </p>
+      <div class="menu-grid">
+        <article class="juice-card">
+          <div class="juice-media" aria-hidden="true">
+            <!-- Replace with optimized <img> when photos are ready. See docs/IMAGE_GUIDELINES.md -->
+            <span class="juice-emoji">🧅</span>
+          </div>
+          <h3>Green Machine</h3>
+          <p>Kale, spinach, cucumber, apple, lemon, ginger. The daily driver.</p>
+          <div class="juice-meta">
+            <span class="juice-price">$9</span>
+            <span class="juice-tag">Bestseller</span>
+          </div>
+        </article>
+        <article class="juice-card">
+          <div class="juice-media" aria-hidden="true">
+            <span class="juice-emoji">🍊</span>
+          </div>
+          <h3>Citrus Surge</h3>
+          <p>Orange, grapefruit, lemon, turmeric. Bright and sharp.</p>
+          <div class="juice-meta">
+            <span class="juice-price">$8</span>
+            <span class="juice-tag">Morning</span>
+          </div>
+        </article>
+        <article class="juice-card">
+          <div class="juice-media" aria-hidden="true">
+            <span class="juice-emoji">🥑</span>
+          </div>
+          <h3>Beet Rooted</h3>
+          <p>Beet, carrot, apple, ginger. Earthy power in a bottle.</p>
+          <div class="juice-meta">
+            <span class="juice-price">$9</span>
+            <span class="juice-tag">Recovery</span>
+          </div>
+        </article>
+        <article class="juice-card">
+          <div class="juice-media" aria-hidden="true">
+            <span class="juice-emoji">🍍</span>
+          </div>
+          <h3>Tropical Calm</h3>
+          <p>Pineapple, mango, coconut water, lime. Soft landing.</p>
+          <div class="juice-meta">
+            <span class="juice-price">$9</span>
+            <span class="juice-tag">Hydration</span>
+          </div>
+        </article>
+        <article class="juice-card">
+          <div class="juice-media" aria-hidden="true">
+            <span class="juice-emoji">🧄</span>
+          </div>
+          <h3>Garlic Guard</h3>
+          <p>Apple, lemon, ginger, garlic, cayenne. For when you mean business.</p>
+          <div class="juice-meta">
+            <span class="juice-price">$10</span>
+            <span class="juice-tag">Immune</span>
+          </div>
+        </article>
+        <article class="juice-card">
+          <div class="juice-media" aria-hidden="true">
+            <span class="juice-emoji">🍑</span>
+          </div>
+          <h3>Golden Hour</h3>
+          <p>Carrot, orange, turmeric, black pepper, ginger. Sunshine in liquid form.</p>
+          <div class="juice-meta">
+            <span class="juice-price">$9</span>
+            <span class="juice-tag">Anti-inflam</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter" id="newsletter">
+      <div class="newsletter-inner">
+        <h2>Stay in the loop</h2>
+        <p>New flavors, pop-up locations, and early access. No spam — just the good stuff.</p>
+        <!-- Formspree free tier: replace YOUR_FORM_ID after creating account at formspree.io -->
+        <form class="newsletter-form" id="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" required placeholder="Your email" aria-label="Email address" autocomplete="email" />
+          <input type="hidden" name="_subject" value="H3O Juice newsletter signup" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note">We respect your inbox. Unsubscribe anytime.</p>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
       </div>
     </div>
-  </section>
 
-  <!-- MENU -->
-  <section id="menu">
-    <p class="section-label">What we pour</p>
-    <h2 class="section-title">Current lineup</h2>
-    <p class="section-desc">
-      Fresh rotations keep things interesting. Here’s a taste of what’s moving right now. 
-      (Real photos coming soon — these emojis are just holding the fort.)
-    </p>
-
-    <div class="menu-grid">
-      <article class="juice-card">
-        <span class="juice-emoji">🧅</span>
-        <h3>Green Machine</h3>
-        <p>Kale, spinach, cucumber, apple, lemon, ginger. The daily driver.</p>
-        <div class="juice-meta">
-          <span class="juice-price">$9</span>
-          <span class="juice-tag">Bestseller</span>
-        </div>
-      </article>
-
-      <article class="juice-card">
-        <span class="juice-emoji">🍊</span>
-        <h3>Citrus Surge</h3>
-        <p>Orange, grapefruit, lemon, turmeric. Bright and sharp.</p>
-        <div class="juice-meta">
-          <span class="juice-price">$8</span>
-          <span class="juice-tag">Morning</span>
-        </div>
-      </article>
-
-      <article class="juice-card">
-        <span class="juice-emoji">🥑</span>
-        <h3>Beet Rooted</h3>
-        <p>Beet, carrot, apple, ginger. Earthy power in a bottle.</p>
-        <div class="juice-meta">
-          <span class="juice-price">$9</span>
-          <span class="juice-tag">Recovery</span>
-        </div>
-      </article>
-
-      <article class="juice-card">
-        <span class="juice-emoji">🍍</span>
-        <h3>Tropical Calm</h3>
-        <p>Pineapple, mango, coconut water, lime. Soft landing.</p>
-        <div class="juice-meta">
-          <span class="juice-price">$9</span>
-          <span class="juice-tag">Hydration</span>
-        </div>
-      </article>
-
-      <article class="juice-card">
-        <span class="juice-emoji">🧄</span>
-        <h3>Garlic Guard</h3>
-        <p>Apple, lemon, ginger, garlic, cayenne. For when you mean business.</p>
-        <div class="juice-meta">
-          <span class="juice-price">$10</span>
-          <span class="juice-tag">Immune</span>
-        </div>
-      </article>
-
-      <article class="juice-card">
-        <span class="juice-emoji">🍑</span>
-        <h3>Golden Hour</h3>
-        <p>Carrot, orange, turmeric, black pepper, ginger. Sunshine in liquid form.</p>
-        <div class="juice-meta">
-          <span class="juice-price">$9</span>
-          <span class="juice-tag">Anti-inflam</span>
-        </div>
-      </article>
+    <!-- CTA -->
+    <div class="cta-band" id="contact">
+      <h2>Ready for the real thing?</h2>
+      <p>
+        Find us around St. Pete / Tampa Bay, or reach out to lock in your next order.
+        Socials and exact locations coming online as we claim the handles.
+      </p>
+      <div class="hero-actions" style="justify-content: center;">
+        <a href="https://instagram.com/h3ojuicefl" class="btn btn-primary" target="_blank" rel="noopener noreferrer">@h3ojuicefl</a>
+        <a href="mailto:hello@h3ojuicefl.com" class="btn btn-ghost">Email us</a>
+      </div>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-band" id="contact">
-    <h2>Ready for the real thing?</h2>
-    <p>
-      Find us around St. Pete / Tampa Bay, or reach out to lock in your next order. 
-      Socials and exact locations coming online as we claim the handles.
-    </p>
-    <div class="hero-actions" style="justify-content: center;">
-      <a href="https://instagram.com/h3ojuicefl" class="btn btn-primary" target="_blank" rel="noopener">@h3ojuicefl</a>
-      <a href="mailto:hello@h3ojuicefl.com" class="btn btn-ghost">Email us</a>
-    </div>
-  </div>
+  </main>
 
   <!-- FOOTER -->
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">H3O<span>Juice</span></div>
@@ -675,12 +541,13 @@
           <h4>Explore</h4>
           <a href="#about">About</a>
           <a href="#menu">Menu</a>
+          <a href="#newsletter">Updates</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
-          <a href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener noreferrer">TikTok</a>
           <a href="mailto:hello@h3ojuicefl.com">Email</a>
         </div>
       </div>
@@ -691,5 +558,42 @@
     </div>
   </footer>
 
+  <script>
+    // Newsletter form enhancement (works with Formspree)
+    const form = document.getElementById('newsletter-form');
+    const status = document.getElementById('form-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        // If still on placeholder ID, show guidance
+        if (form.action.includes('YOUR_FORM_ID')) {
+          e.preventDefault();
+          status.textContent = 'Setup needed: replace YOUR_FORM_ID in the form action with your Formspree form ID (free at formspree.io).';
+          status.className = 'form-status error';
+          return;
+        }
+        e.preventDefault();
+        status.textContent = 'Sending…';
+        status.className = 'form-status';
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            status.textContent = 'You\'re in. Welcome to the list.';
+            status.className = 'form-status success';
+            form.reset();
+          } else {
+            status.textContent = 'Something went wrong. Try again or email us.';
+            status.className = 'form-status error';
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.className = 'form-status error';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
