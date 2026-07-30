@@ -10,8 +10,9 @@ This document is the single source of truth for any developer, designer, or crea
 
 ## 1. What this project is
 
-H3O Juice FL is a **real operating juice business** (18+ months, 6 days/week, St. Pete / Tampa Bay).  
-The digital side is intentionally lean: one high-quality single-page site + documentation that lets the brand scale cleanly.
+H3O Juice FL is a **real operating juice business** (18+ months, 6 days/week, Tampa Bay & Central Florida).  
+Mobile operation: hand-pressed juice (Seeded Watermelon + Mango·Pineapple·Orange), sold from coolers.  
+Phone for orders/location: **813-629-1078**.
 
 **Core philosophy:** Real product first. Software supports the business; it does not pretend to be the business.
 
@@ -24,10 +25,11 @@ The digital side is intentionally lean: one high-quality single-page site + docu
 | Website (single page) | ✅ Built | Liquid Glass–inspired design |
 | Deployed / live | ⏳ Pending | Enable GitHub Pages (see README) |
 | Real product photos | ❌ Missing | Emoji placeholders only |
-| Newsletter backend | ⏳ Needs Formspree ID | Free tier works |
+| H3O Circle VIP form | ✅ Live | FormSubmit → stpetepower@gmail.com |
+| Daily location system | ✅ Live | Edit `location.json` only |
 | Social handles claimed | ❌ Pending | Target: @h3ojuicefl |
 | Native app | ❌ Not started | See FUTURE_APPS_AND_SPATIAL.md |
-| SMS / loyalty | ❌ Not started | Future |
+| Automated SMS pipeline | ❌ Not started | Form collects optional phone; no auto-SMS yet |
 | Ops / margin tools | ❌ Not started | Future |
 
 ---
@@ -36,7 +38,8 @@ The digital side is intentionally lean: one high-quality single-page site + docu
 
 ```
 h3o-juice/
-├─ index.html              # The live page (Liquid Glass aesthetic)
+├─ index.html              # Live page (Liquid Glass aesthetic)
+├─ location.json           # Daily drop status — edit this, not the HTML
 ├─ manifest.json           # PWA manifest
 ├─ README.md               # Quick start + Pages instructions
 ├─ docs/
@@ -44,8 +47,8 @@ h3o-juice/
 │   ├─ DESIGN_SYSTEM.md   # Colors, type, materials, spacing
 │   ├─ IMAGE_GUIDELINES.md# How to add optimized photos
 │   ├─ INSTAGRAM_PROFILE.md # Complete social system
-│   ├─ FUTURE_APPS_AND_SPATIAL.md  # Native + Liquid Glass + WebXR
-│   └─ CONTRIBUTING.md    # How to work on this repo
+│   ├─ FUTURE_APPS_AND_SPATIAL.md
+│   └─ CONTRIBUTING.md
 └─ assets/                # (create when photos arrive)
     ├─ images/
     └─ icons/
@@ -53,33 +56,64 @@ h3o-juice/
 
 ---
 
-## 4. Immediate next actions (priority order)
+## 4. Daily operations (location)
 
-1. **Enable GitHub Pages** (30 seconds) — see README.md  
-2. **Claim social handles** (`@h3ojuicefl` on Instagram, TikTok, etc.)  
-3. **Take real product photos** and follow `docs/IMAGE_GUIDELINES.md`  
-4. **Create free Formspree form** and replace `YOUR_FORM_ID` in `index.html`  
-5. **Add OG image** (`assets/images/og-cover.jpg` — 1200×630)  
+**To update today’s stop** (takes ~20 seconds):
+
+1. Open `location.json`
+2. Edit these fields:
+   - `status` — e.g. `"LIVE NOW · FRESH BATCH READY"`
+   - `location_name` — e.g. `"Downtown Fresh Market Setup"`
+   - `county` — e.g. `"Pinellas County"`
+   - `hours` — e.g. `"8:00 AM – 2:00 PM Today"`
+   - `maps_link` — Apple/Google Maps URL
+3. Commit / save
+
+The page reads this file automatically. No need to touch `index.html`.
 
 ---
 
-## 5. Design direction
+## 5. H3O Circle™ VIP form
+
+- Collects: first name, email (required), phone (optional)
+- Backend: **FormSubmit** → currently `stpetepower@gmail.com`
+- First submission triggers a one-time confirmation email from FormSubmit — click the link to activate
+- To change destination email: edit the `action` attribute on the form in `index.html`  
+  `https://formsubmit.co/YOUR_EMAIL@example.com`
+
+There is **no automated SMS system** yet. Phone numbers land in the email so you can text people manually or later connect a real SMS tool.
+
+---
+
+## 6. Immediate next actions (priority order)
+
+1. **Enable GitHub Pages** (30 seconds) — see README.md  
+2. **Claim social handles** (`@h3ojuicefl`)  
+3. **Take real product photos** → `docs/IMAGE_GUIDELINES.md`  
+4. **Confirm FormSubmit** by submitting a test signup and clicking the activation email  
+5. **Update `location.json`** with a real today’s stop  
+6. **Add OG image** (`assets/images/og-cover.jpg` — 1200×630)  
+
+---
+
+## 7. Design direction
 
 - **Web:** Liquid Glass–inspired (translucent surfaces, blur, depth, fluid interaction).  
 - **Native (future):** Full Apple Liquid Glass material via SwiftUI.  
 - **Brand voice:** Honest, calm, premium, zero hype.  
 - **Visual:** Dark base, soft green accent, gold highlights, glass materials.
 
-Full tokens and rules live in `docs/DESIGN_SYSTEM.md`.
+Full tokens: `docs/DESIGN_SYSTEM.md`.
 
 ---
 
-## 6. Contact & ownership
+## 8. Contact & ownership
 
 - GitHub owner: `stpetepower-afk`  
-- Business: H3O Juice FL, St. Petersburg / Tampa Bay area  
+- Business phone: 813-629-1078  
+- Business: H3O Juice FL, Tampa Bay & Central Florida  
 
-When you finish a meaningful piece of work, update this HANDOFF.md status table and the relevant specialized doc.
+When you finish meaningful work, update this status table and the relevant specialized doc.
 
 ---
 
