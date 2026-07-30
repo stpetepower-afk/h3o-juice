@@ -170,30 +170,6 @@
     .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; }
     .chip { border-radius: 999px; padding: 0.55rem 1rem; font-weight: 600; font-size: 0.9rem; color: var(--text); }
 
-    /* Today's Drop */
-    .drop-panel {
-      border-radius: calc(var(--radius) + 4px);
-      padding: 1.75rem 1.5rem;
-      margin: 0 1.5rem 2rem;
-      max-width: 1100px;
-      margin-left: auto; margin-right: auto;
-      position: relative; z-index: 2;
-      display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; justify-content: space-between;
-    }
-    .drop-info { flex: 1 1 240px; }
-    .drop-status {
-      display: inline-flex; align-items: center; gap: 0.45rem;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--accent-soft); margin-bottom: 0.4rem;
-    }
-    .drop-status .live-dot {
-      width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
-      box-shadow: 0 0 8px var(--accent); animation: pulse 2s infinite;
-    }
-    .drop-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; margin-bottom: 0.25rem; }
-    .drop-meta { color: var(--text-muted); font-size: 0.9rem; }
-    .drop-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-
     /* H3O Circle form */
     .newsletter {
       border-radius: calc(var(--radius) + 6px);
@@ -286,7 +262,7 @@
     @media (max-width: 700px) { .nav-links { display: none; } }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .hero-badge .dot, .drop-status .live-dot { animation: none; }
+      .hero-badge .dot { animation: none; }
       .juice-card, .btn, .nav-cta { transition: none; }
     }
   </style>
@@ -328,19 +304,6 @@
         <div class="stat" role="listitem"><strong>100%</strong><span>hand-pressed</span></div>
       </div>
     </header>
-
-    <!-- TODAY'S DROP (loads from location.json) -->
-    <div class="drop-panel glass" id="todays-drop">
-      <div class="drop-info">
-        <div class="drop-status"><span class="live-dot" aria-hidden="true"></span> <span id="drop-status">Checking today’s stop…</span></div>
-        <div class="drop-name" id="drop-name">Loading location…</div>
-        <div class="drop-meta" id="drop-hours">—</div>
-      </div>
-      <div class="drop-actions">
-        <a href="tel:+18136291078" class="btn btn-primary" style="padding:0.7rem 1.3rem;font-size:0.9rem;">Call / Text</a>
-        <a href="#" id="maps-button" class="btn btn-ghost" style="padding:0.7rem 1.3rem;font-size:0.9rem;" target="_blank" rel="noopener noreferrer">Open Maps</a>
-      </div>
-    </div>
 
     <section id="about" aria-labelledby="about-title">
       <p class="section-label">The real story</p>
@@ -491,24 +454,6 @@
   <a class="callbar" href="tel:+18136291078">📞 Call / Text to Order — 813-629-1078</a>
 
   <script>
-    // Dynamic daily location
-    fetch('location.json')
-      .then(r => r.json())
-      .then(data => {
-        const statusEl = document.getElementById('drop-status');
-        const nameEl = document.getElementById('drop-name');
-        const hoursEl = document.getElementById('drop-hours');
-        const mapsBtn = document.getElementById('maps-button');
-        if (statusEl) statusEl.textContent = data.status || 'Today\'s stop';
-        if (nameEl) nameEl.textContent = data.location_name || 'Call for location';
-        if (hoursEl) hoursEl.textContent = [data.hours, data.county].filter(Boolean).join(' · ');
-        if (mapsBtn && data.maps_link) mapsBtn.href = data.maps_link;
-      })
-      .catch(() => {
-        const nameEl = document.getElementById('drop-name');
-        if (nameEl) nameEl.textContent = 'Call or text 813-629-1078 for today\'s stop';
-      });
-
     // FormSubmit success handling (FormSubmit redirects by default; this improves UX if AJAX is preferred later)
     const form = document.getElementById('circle-form');
     const status = document.getElementById('form-status');
