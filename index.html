@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H3O Juice FL — Premium Cold-Pressed Juice</title>
+  <meta name="description" content="H3O Juice FL — Real cold-pressed juice. 18 months of serving St. Pete & the Tampa Bay area. Fresh, clean, made with care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1410;
+      --surface: #1a211c;
+      --surface-2: #232b25;
+      --text: #f4f1ea;
+      --text-muted: #a8b0a4;
+      --accent: #7cb342;
+      --accent-soft: #9ccc65;
+      --accent-dark: #558b2f;
+      --orange: #ff8a65;
+      --gold: #e8c47c;
+      --border: rgba(255,255,255,0.08);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle grain */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 20, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .logo span {
+      color: var(--accent-soft);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #0f1410;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7rem 1.5rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      width: fit-content;
+    }
+
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.75rem, 7vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      max-width: 14ch;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent-soft);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 36ch;
+      margin-bottom: 2.5rem;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0f1410;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-soft);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      background: var(--surface);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 0.15rem;
+    }
+
+    .stat span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      max-width: 18ch;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 48ch;
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3rem;
+        align-items: center;
+      }
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .about-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .about-points {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .point {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .point-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .point strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .point span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* MENU */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .juice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .juice-card:hover {
+      border-color: rgba(124, 179, 66, 0.35);
+      transform: translateY(-3px);
+    }
+
+    .juice-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.9rem;
+      display: block;
+    }
+
+    .juice-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .juice-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .juice-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .juice-price {
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .juice-tag {
+      background: var(--surface-2);
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(135deg, var(--surface) 0%, #1e2a20 100%);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 2rem 1.5rem 0;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-band h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-band p {
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+      max-width: 36ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 3.5rem 1.5rem 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      max-width: 28ch;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent-soft);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Mobile nav hide */
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">H3O<span>Juice</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Order / Find Us</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Serving St. Pete & Tampa Bay · 6 days a week
+    </div>
+    <h1>Real juice.<br /><em>No shortcuts.</em></h1>
+    <p class="hero-sub">
+      Premium cold-pressed juice made fresh for the people who show up. 
+      Eighteen months of real sales, real customers, and real results.
+    </p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-primary">See the menu</a>
+      <a href="#contact" class="btn btn-ghost">Where to find us</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <strong>18+</strong>
+        <span>months serving</span>
+      </div>
+      <div class="stat">
+        <strong>6</strong>
+        <span>days a week</span>
+      </div>
+      <div class="stat">
+        <strong>100%</strong>
+        <span>cold-pressed</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">The real story</p>
+    <h2 class="section-title">Built on juice, not hype</h2>
+    <p class="section-desc">
+      H3O Juice started with a simple idea: make something people actually want to drink every week. 
+      No gimmicks. No over-promises. Just clean, cold-pressed juice that earns its keep.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-points">
+        <div class="point">
+          <span class="point-icon">🍊</span>
+          <div>
+            <strong>Real fruit, real process</strong>
+            <span>Cold-pressed so you get the nutrients, not the heat damage.</span>
+          </div>
+        </div>
+        <div class="point">
+          <span class="point-icon">💪</span>
+          <div>
+            <strong>Repeat customers</strong>
+            <span>People come back because it tastes good and they feel the difference.</span>
+          </div>
+        </div>
+        <div class="point">
+          <span class="point-icon">🏙️</span>
+          <div>
+            <strong>Local & consistent</strong>
+            <span>St. Pete roots. Six days a week. No disappearing acts.</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-card">
+        <h3>Why H3O?</h3>
+        <p>
+          Water is H₂O. We add the third element that matters: intention. 
+          Every bottle is made to deliver clean energy, not empty calories or marketing fluff. 
+          That’s it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <p class="section-label">What we pour</p>
+    <h2 class="section-title">Current lineup</h2>
+    <p class="section-desc">
+      Fresh rotations keep things interesting. Here’s a taste of what’s moving right now. 
+      (Real photos coming soon — these emojis are just holding the fort.)
+    </p>
+
+    <div class="menu-grid">
+      <article class="juice-card">
+        <span class="juice-emoji">🧅</span>
+        <h3>Green Machine</h3>
+        <p>Kale, spinach, cucumber, apple, lemon, ginger. The daily driver.</p>
+        <div class="juice-meta">
+          <span class="juice-price">$9</span>
+          <span class="juice-tag">Bestseller</span>
+        </div>
+      </article>
+
+      <article class="juice-card">
+        <span class="juice-emoji">🍊</span>
+        <h3>Citrus Surge</h3>
+        <p>Orange, grapefruit, lemon, turmeric. Bright and sharp.</p>
+        <div class="juice-meta">
+          <span class="juice-price">$8</span>
+          <span class="juice-tag">Morning</span>
+        </div>
+      </article>
+
+      <article class="juice-card">
+        <span class="juice-emoji">🥑</span>
+        <h3>Beet Rooted</h3>
+        <p>Beet, carrot, apple, ginger. Earthy power in a bottle.</p>
+        <div class="juice-meta">
+          <span class="juice-price">$9</span>
+          <span class="juice-tag">Recovery</span>
+        </div>
+      </article>
+
+      <article class="juice-card">
+        <span class="juice-emoji">🍍</span>
+        <h3>Tropical Calm</h3>
+        <p>Pineapple, mango, coconut water, lime. Soft landing.</p>
+        <div class="juice-meta">
+          <span class="juice-price">$9</span>
+          <span class="juice-tag">Hydration</span>
+        </div>
+      </article>
+
+      <article class="juice-card">
+        <span class="juice-emoji">🧄</span>
+        <h3>Garlic Guard</h3>
+        <p>Apple, lemon, ginger, garlic, cayenne. For when you mean business.</p>
+        <div class="juice-meta">
+          <span class="juice-price">$10</span>
+          <span class="juice-tag">Immune</span>
+        </div>
+      </article>
+
+      <article class="juice-card">
+        <span class="juice-emoji">🍑</span>
+        <h3>Golden Hour</h3>
+        <p>Carrot, orange, turmeric, black pepper, ginger. Sunshine in liquid form.</p>
+        <div class="juice-meta">
+          <span class="juice-price">$9</span>
+          <span class="juice-tag">Anti-inflam</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band" id="contact">
+    <h2>Ready for the real thing?</h2>
+    <p>
+      Find us around St. Pete / Tampa Bay, or reach out to lock in your next order. 
+      Socials and exact locations coming online as we claim the handles.
+    </p>
+    <div class="hero-actions" style="justify-content: center;">
+      <a href="https://instagram.com/h3ojuicefl" class="btn btn-primary" target="_blank" rel="noopener">@h3ojuicefl</a>
+      <a href="mailto:hello@h3ojuicefl.com" class="btn btn-ghost">Email us</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">H3O<span>Juice</span></div>
+        <p>Premium cold-pressed juice. St. Pete roots. Built on real customers, not pitch decks.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener">TikTok</a>
+          <a href="mailto:hello@h3ojuicefl.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 H3O Juice FL. All rights reserved.</span>
+      <span>Made with real fruit & zero fluff.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
