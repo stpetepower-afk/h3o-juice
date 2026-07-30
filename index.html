@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>H3O Juice FL — Fresh Hand-Pressed Juice | Tampa Bay &amp; Central Florida</title>
+  <title>H3O Juice FL — Fresh Hand-Pressed Juice | Tampa Bay & Central Florida</title>
   <meta name="description" content="H3O Juice FL — real, hand-pressed juice made fresh daily. Seeded Watermelon and Mango Pineapple Orange, served six days a week across Tampa Bay and Central Florida. Call or text 813-629-1078 for today's location." />
   <meta name="theme-color" content="#0c100e" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://stpetepower-afk.github.io/h3o-juice/" />
 
-  <!-- Open Graph (image intentionally omitted until a real product photo exists) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="H3O Juice FL — Fresh Hand-Pressed Juice" />
   <meta property="og:description" content="Real hand-pressed juice, made daily across Tampa Bay & Central Florida. Call/text 813-629-1078 for today's stop." />
@@ -74,7 +73,7 @@
       font-family: 'DM Sans', system-ui, sans-serif;
       background: var(--bg); color: var(--text); line-height: 1.6;
       -webkit-font-smoothing: antialiased; overflow-x: hidden;
-      padding-bottom: 3.75rem; /* room for sticky call bar on mobile */
+      padding-bottom: 3.75rem;
     }
     body::before {
       content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -168,45 +167,128 @@
     .juice-tag.original { color: var(--melon); border-color: rgba(255,107,129,0.3); }
     .juice-tag.evolution { color: var(--gold); border-color: rgba(232,196,124,0.3); }
 
-    /* Coverage chips */
     .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; }
     .chip { border-radius: 999px; padding: 0.55rem 1rem; font-weight: 600; font-size: 0.9rem; color: var(--text); }
 
-    .newsletter { border-radius: calc(var(--radius) + 6px); padding: 2.75rem 2rem; margin: 0 1.5rem; max-width: 1100px; margin-left: auto; margin-right: auto; position: relative; z-index: 2; }
-    .newsletter-inner { max-width: 520px; margin: 0 auto; text-align: center; }
+    /* Today's Drop */
+    .drop-panel {
+      border-radius: calc(var(--radius) + 4px);
+      padding: 1.75rem 1.5rem;
+      margin: 0 1.5rem 2rem;
+      max-width: 1100px;
+      margin-left: auto; margin-right: auto;
+      position: relative; z-index: 2;
+      display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; justify-content: space-between;
+    }
+    .drop-info { flex: 1 1 240px; }
+    .drop-status {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent-soft); margin-bottom: 0.4rem;
+    }
+    .drop-status .live-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+      box-shadow: 0 0 8px var(--accent); animation: pulse 2s infinite;
+    }
+    .drop-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .drop-meta { color: var(--text-muted); font-size: 0.9rem; }
+    .drop-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+    /* H3O Circle form */
+    .newsletter {
+      border-radius: calc(var(--radius) + 6px);
+      padding: 2.75rem 2rem;
+      margin: 0 1.5rem;
+      max-width: 1100px;
+      margin-left: auto; margin-right: auto;
+      position: relative; z-index: 2;
+    }
+    .newsletter-inner { max-width: 460px; margin: 0 auto; text-align: center; }
     .newsletter h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.6rem; }
     .newsletter p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
-    .newsletter-form { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
-    .newsletter-form input[type="email"] { flex: 1 1 220px; min-width: 0; padding: 0.9rem 1.25rem; border-radius: 999px; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.35); color: var(--text); font-size: 0.95rem; font-family: inherit; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
-    .newsletter-form input[type="email"]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
-    .newsletter-form input[type="email"]::placeholder { color: var(--text-muted); }
-    .newsletter-form button { padding: 0.9rem 1.6rem; border-radius: 999px; border: none; background: var(--accent); color: #0c100e; font-weight: 600; font-size: 0.95rem; cursor: pointer; font-family: inherit; transition: all 0.2s; }
-    .newsletter-form button:hover { background: var(--accent-soft); transform: translateY(-1px); box-shadow: 0 4px 16px var(--accent-glow); }
+    .circle-form { display: flex; flex-direction: column; gap: 0.75rem; }
+    .circle-form input[type="text"],
+    .circle-form input[type="email"],
+    .circle-form input[type="tel"] {
+      width: 100%;
+      padding: 0.95rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid var(--glass-border);
+      background: rgba(0,0,0,0.35);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .circle-form input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .circle-form input::placeholder { color: var(--text-muted); }
+    .circle-form button {
+      padding: 0.95rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #0c100e;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+      margin-top: 0.25rem;
+    }
+    .circle-form button:hover {
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
     .newsletter-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted); }
     .form-status { margin-top: 1rem; font-size: 0.9rem; min-height: 1.4em; }
     .form-status.success { color: var(--accent-soft); }
     .form-status.error { color: #ef9a9a; }
 
-    .cta-band { border-radius: calc(var(--radius) + 6px); padding: 3rem 2rem; text-align: center; margin: 2.5rem 1.5rem 0; max-width: 1100px; margin-left: auto; margin-right: auto; position: relative; z-index: 2; }
+    .cta-band {
+      border-radius: calc(var(--radius) + 6px);
+      padding: 3rem 2rem; text-align: center;
+      margin: 2.5rem 1.5rem 0; max-width: 1100px;
+      margin-left: auto; margin-right: auto;
+      position: relative; z-index: 2;
+    }
     .cta-band h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 0.75rem; }
     .cta-band p { color: var(--text-muted); margin-bottom: 1.75rem; max-width: 40ch; margin-left: auto; margin-right: auto; }
     .cta-phone { display: block; margin-top: 1.1rem; font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); }
 
-    footer { padding: 3.5rem 1.5rem 2.5rem; max-width: 1100px; margin: 4rem auto 0; border-top: 1px solid var(--glass-border); position: relative; z-index: 2; }
+    footer {
+      padding: 3.5rem 1.5rem 2.5rem; max-width: 1100px; margin: 4rem auto 0;
+      border-top: 1px solid var(--glass-border); position: relative; z-index: 2;
+    }
     .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; }
     .footer-brand p { color: var(--text-muted); font-size: 0.9rem; max-width: 30ch; margin-top: 0.75rem; }
     .footer-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
     .footer-col h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.9rem; }
     .footer-col a { display: block; color: var(--text); font-size: 0.95rem; margin-bottom: 0.45rem; transition: color 0.2s; }
     .footer-col a:hover { color: var(--accent-soft); }
-    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); font-size: 0.85rem; color: var(--text-muted); }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+      padding-top: 1.5rem; border-top: 1px solid var(--glass-border);
+      font-size: 0.85rem; color: var(--text-muted);
+    }
 
-    /* Sticky mobile call bar */
-    .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; display: block; text-align: center; padding: 0.9rem; font-weight: 700; letter-spacing: 0.3px; color: #0c100e; background: var(--accent); box-shadow: 0 -4px 20px rgba(0,0,0,0.35); }
+    .callbar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      display: block; text-align: center; padding: 0.9rem;
+      font-weight: 700; letter-spacing: 0.3px; color: #0c100e;
+      background: var(--accent); box-shadow: 0 -4px 20px rgba(0,0,0,0.35);
+    }
     @media (min-width: 760px) { .callbar { display: none; } body { padding-bottom: 0; } }
-
     @media (max-width: 700px) { .nav-links { display: none; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero-badge .dot { animation: none; } .juice-card, .btn, .nav-cta { transition: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-badge .dot, .drop-status .live-dot { animation: none; }
+      .juice-card, .btn, .nav-cta { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -219,6 +301,7 @@
       <a href="#about">About</a>
       <a href="#menu">Juices</a>
       <a href="#coverage">Where</a>
+      <a href="#circle">Circle</a>
       <a href="#contact">Order</a>
     </div>
     <a href="tel:+18136291078" class="nav-cta">Call / Text to Order</a>
@@ -228,7 +311,7 @@
     <header class="hero">
       <div class="hero-badge glass">
         <span class="dot" aria-hidden="true"></span>
-        Tampa Bay &amp; Central Florida · 6 days a week
+        Tampa Bay & Central Florida · 6 days a week
       </div>
       <h1>Real juice.<br /><em>Hand-pressed.</em></h1>
       <p class="hero-sub">
@@ -245,6 +328,19 @@
         <div class="stat" role="listitem"><strong>100%</strong><span>hand-pressed</span></div>
       </div>
     </header>
+
+    <!-- TODAY'S DROP (loads from location.json) -->
+    <div class="drop-panel glass" id="todays-drop">
+      <div class="drop-info">
+        <div class="drop-status"><span class="live-dot" aria-hidden="true"></span> <span id="drop-status">Checking today’s stop…</span></div>
+        <div class="drop-name" id="drop-name">Loading location…</div>
+        <div class="drop-meta" id="drop-hours">—</div>
+      </div>
+      <div class="drop-actions">
+        <a href="tel:+18136291078" class="btn btn-primary" style="padding:0.7rem 1.3rem;font-size:0.9rem;">Call / Text</a>
+        <a href="#" id="maps-button" class="btn btn-ghost" style="padding:0.7rem 1.3rem;font-size:0.9rem;" target="_blank" rel="noopener noreferrer">Open Maps</a>
+      </div>
+    </div>
 
     <section id="about" aria-labelledby="about-title">
       <p class="section-label">The real story</p>
@@ -272,7 +368,7 @@
           <div class="point">
             <span class="point-icon glass" aria-hidden="true">🚚</span>
             <div>
-              <strong>Local &amp; consistent</strong>
+              <strong>Local & consistent</strong>
               <span>Tampa Bay roots, growing across Central Florida — by word of mouth, one customer at a time.</span>
             </div>
           </div>
@@ -311,7 +407,7 @@
 
     <section id="coverage" aria-labelledby="coverage-title">
       <p class="section-label">Where we serve</p>
-      <h2 id="coverage-title" class="section-title">Across the Bay &amp; Central Florida</h2>
+      <h2 id="coverage-title" class="section-title">Across the Bay & Central Florida</h2>
       <p class="section-desc">
         We're a mobile operation, so the spot changes with the day. Call or text
         <a href="tel:+18136291078" style="color:var(--accent-soft);font-weight:600;">813-629-1078</a>
@@ -327,16 +423,27 @@
       </div>
     </section>
 
-    <div class="newsletter glass-strong" id="newsletter">
+    <!-- H3O CIRCLE VIP FORM (FormSubmit — fully operational) -->
+    <div class="newsletter glass-strong" id="circle">
       <div class="newsletter-inner">
-        <h2>Stay in the loop</h2>
-        <p>Fresh-batch alerts, daily locations, and new flavors. No spam — just the good stuff.</p>
-        <form class="newsletter-form" id="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <input type="email" name="email" required placeholder="Your email" aria-label="Email address" autocomplete="email" />
-          <input type="hidden" name="_subject" value="H3O Juice newsletter signup" />
-          <button type="submit">Notify me</button>
+        <h2>Join H3O Circle™</h2>
+        <p>Get email & optional SMS alerts when fresh batches drop near you. No spam — just the good stuff.</p>
+
+        <!-- FormSubmit: sends to your inbox. Change the email below if needed. -->
+        <form class="circle-form" id="circle-form" action="https://formsubmit.co/stpetepower@gmail.com" method="POST">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="New H3O Circle VIP Sign-Up" />
+          <input type="hidden" name="_template" value="table" />
+
+          <input type="text" name="name" placeholder="First name" required autocomplete="given-name" aria-label="First name" />
+          <input type="email" name="email" placeholder="Email address" required autocomplete="email" aria-label="Email address" />
+          <input type="tel" name="phone" placeholder="Phone (optional — for SMS drops)" autocomplete="tel" aria-label="Phone number optional" />
+
+          <button type="submit">Claim My VIP Spot</button>
         </form>
-        <p class="newsletter-note">We respect your inbox. Unsubscribe anytime.</p>
+
+        <p class="newsletter-note">We respect your inbox & phone. Unsubscribe anytime.</p>
         <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
       </div>
     </div>
@@ -364,51 +471,52 @@
           <a href="#about">About</a>
           <a href="#menu">Juices</a>
           <a href="#coverage">Where to find us</a>
+          <a href="#circle">H3O Circle</a>
           <a href="#contact">Order</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="tel:+18136291078">Call / Text: 813-629-1078</a>
-          <a href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener noreferrer">Instagram (soon)</a>
-          <a href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener noreferrer">TikTok (soon)</a>
+          <a href="https://instagram.com/h3ojuicefl" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://tiktok.com/@h3ojuicefl" target="_blank" rel="noopener noreferrer">TikTok</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 H3O Juice FL.</span>
-      <span>Made with real fruit &amp; zero fluff.</span>
+      <span>Made with real fruit & zero fluff.</span>
     </div>
   </footer>
 
   <a class="callbar" href="tel:+18136291078">📞 Call / Text to Order — 813-629-1078</a>
 
   <script>
-    const form = document.getElementById('newsletter-form');
+    // Dynamic daily location
+    fetch('location.json')
+      .then(r => r.json())
+      .then(data => {
+        const statusEl = document.getElementById('drop-status');
+        const nameEl = document.getElementById('drop-name');
+        const hoursEl = document.getElementById('drop-hours');
+        const mapsBtn = document.getElementById('maps-button');
+        if (statusEl) statusEl.textContent = data.status || 'Today\'s stop';
+        if (nameEl) nameEl.textContent = data.location_name || 'Call for location';
+        if (hoursEl) hoursEl.textContent = [data.hours, data.county].filter(Boolean).join(' · ');
+        if (mapsBtn && data.maps_link) mapsBtn.href = data.maps_link;
+      })
+      .catch(() => {
+        const nameEl = document.getElementById('drop-name');
+        if (nameEl) nameEl.textContent = 'Call or text 813-629-1078 for today\'s stop';
+      });
+
+    // FormSubmit success handling (FormSubmit redirects by default; this improves UX if AJAX is preferred later)
+    const form = document.getElementById('circle-form');
     const status = document.getElementById('form-status');
     if (form) {
-      form.addEventListener('submit', async (e) => {
-        if (form.action.includes('YOUR_FORM_ID')) {
-          e.preventDefault();
-          status.textContent = 'Newsletter not wired yet — create a free form at formspree.io and replace YOUR_FORM_ID in index.html.';
-          status.className = 'form-status error';
-          return;
-        }
-        e.preventDefault();
-        status.textContent = 'Sending…';
-        status.className = 'form-status';
-        try {
-          const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-          if (res.ok) {
-            status.textContent = "You're in. Welcome to the list.";
-            status.className = 'form-status success';
-            form.reset();
-          } else {
-            status.textContent = 'Something went wrong. Try again or call/text us.';
-            status.className = 'form-status error';
-          }
-        } catch {
-          status.textContent = 'Network error. Please try again.';
-          status.className = 'form-status error';
+      form.addEventListener('submit', () => {
+        if (status) {
+          status.textContent = 'Sending…';
+          status.className = 'form-status';
         }
       });
     }
