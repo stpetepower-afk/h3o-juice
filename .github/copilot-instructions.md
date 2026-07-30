@@ -1,36 +1,31 @@
-# Copilot instructions — H3O Juice FL
+# H3O™ Copilot Agent System Instructions
 
-You are working on a **real mobile juice business** repo (Tampa Bay & Central Florida).
-Phone for orders/location: **813-629-1078**.
-
-## Always read first
+## Primary Context & Ground Rules
+Before making any changes or opening a PR, always read and adhere strictly to:
 1. `AGENTS.md`
 2. `docs/HANDOFF.md`
-3. `docs/DESIGN_SYSTEM.md` (when touching visuals)
+3. `docs/IMAGE_GUIDELINES.md`
+4. `docs/DESIGN_SYSTEM.md` (when touching visuals)
 
-## Stack
-- Single-page vanilla HTML/CSS/JS — **no frameworks, no build step**
-- GitHub Pages
-- FormSubmit for the H3O Circle VIP form (`#circle`)
-- `location.json` drives the daily drop panel — **never hard-code daily location in HTML**
-
-## Hard rules
-- Prefer small, honest changes
-- **Never invent features** listed as missing in HANDOFF (no SMS pipeline, no native app, no margin tools, no fake photos)
-- Keep Liquid Glass aesthetic (existing `.glass` / CSS variables)
-- Mobile-first; test mental model at ~375px width
-- After meaningful changes, update the status notes in `docs/HANDOFF.md`
+## Key Operational & Brand Truths
+- Brand Philosophy: "Born from a simple idea. Proven one bottle at a time."
+- Sourcing: 100% Hand-pressed, raw fruit (**NEVER** refer to juices as "cold-pressed" or HPP).
+- Products:
+  1. H3O™ Seeded Watermelon Juice
+  2. H3O™ Mango Pineapple Orange Juice
+- Ordering & Contact: Phone/SMS line is **813-629-1078**.
+- Regional Reach: 6-County coverage across Tampa Bay & Central Florida (Pinellas, Hillsborough, Pasco, Polk, Manatee, Orange/Orlando).
+- Daily Drop Updates: Controlled exclusively via `location.json`. Do not hardcode static daily locations in HTML.
 
 ## Form facts (do not invent fields)
-Current Circle form fields: **name** (required), **email** (required), **phone** (optional).
-There is no “preferred contact method” select unless explicitly added in the issue.
+H3O Circle form fields: **name** (required), **email** (required), **phone** (optional).
+FormSubmit backend — keep submission working. No automated SMS pipeline exists yet.
 
-## Location updates
-Edit **only** `location.json`. The page fetches it automatically.
+## Execution Constraints
+- **No Unbuilt Features:** Do NOT invent unbuilt apps, fake menus, QR code passes, SMS systems, or external dependencies.
+- **Zero Bloat:** Maintain pure, high-craft HTML/CSS/JS with zero third-party framework overhead unless explicitly instructed.
+- **Styling:** Preserve the dark "Liquid Glass" theme, responsive CSS grid, and mobile-first glassmorphic layouts. Use existing CSS variables in `index.html`.
+- **Images:** Use native `<img>` or `<picture>` tags with `loading="lazy"` and `decoding="async"`. No stock photos.
+- After meaningful changes, update status notes in `docs/HANDOFF.md`.
 
-## Style
-- Use existing CSS custom properties in `index.html`
-- Do not add new CSS files or UI libraries
-- Do not add dependencies
-
-Built for a real 18-month business. Honesty over hype.
+Built for a real 18-month juice business. Honesty over hype.
