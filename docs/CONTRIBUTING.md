@@ -32,17 +32,29 @@ Thank you for working on a real business project.
 
 ---
 
+## Daily location updates
+
+**Do not edit HTML for location changes.**  
+Edit only `location.json` (status, location_name, county, hours, maps_link).  
+The page loads it automatically.
+
+---
+
 ## Adding a new juice to the menu
 
 1. Add a new `<article class="juice-card glass">` block in the menu section.
-2. Use the same structure (media → title → description → price/tag).
+2. Use the same structure (media → title → description → tag).
 3. When real photos exist, replace the emoji following IMAGE_GUIDELINES.
 
 ---
 
-## Newsletter form
+## H3O Circle VIP form
 
-The form uses Formspree. Replace `YOUR_FORM_ID` in `index.html` with a real form ID from https://formspree.io (free tier is sufficient).
+- Uses **FormSubmit** (not Formspree).
+- Destination email is in the form `action` attribute in `index.html`.
+- Collects name, email (required), phone (optional).
+- First real submission requires clicking the FormSubmit activation email.
+- There is no automated SMS pipeline yet — phone numbers arrive in the notification email for manual follow-up.
 
 ---
 
